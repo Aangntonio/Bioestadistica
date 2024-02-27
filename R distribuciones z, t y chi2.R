@@ -1,5 +1,4 @@
 # Establece el directorio trabajo
-setwd("E:/Cursos Ciencias/Cursos 2024-2/Ejercicios Software/R distribuciones z, t y chi2")
 
 #Integrales
 
@@ -27,6 +26,7 @@ curve(dnorm(x,200,20), from=100, to=300,
       xlab = "X")
 colorArea(from=100, to=180, dnorm, mean=200, sd=20, col=2, dens=20)
 colorArea(from=220, to=300, dnorm, mean=200, sd=20, col=2, dens=20)
+
 text(200,0.01,labels=c("0.6827"),cex=0.55,col=c("red"))
 
 #Dos desviaciones estandar
@@ -149,7 +149,10 @@ pnorm(2.575829)
 #Para generar un vector de n numeros aleatorios normalmente distribuidos
 #utilizamos rnorm
 
+
 #rnorm(n,\mu,\sigma)
+
+
 rnorm(5)
 rnorm(5)
 
@@ -160,11 +163,13 @@ rnorm(5)
 
 #set.seed(fecha)
 
-set.seed(06-05-2021)
+set.seed(06-08-2021)
 rnorm(5)
 
-set.seed(06-05-2021)
+set.seed(06-08-2021)
 rnorm(5)
+
+
 
 #ahora cuando ejecutamos set.seed y rnorm obtenemos los mismos numeros
 
@@ -316,10 +321,15 @@ text(2.5,0.03,2.6879,cex=0.55,col=c("red"))
 #Usaremos dplyr para manipular los dataframes con mayor facilidad
 library(dplyr)
 #Usaremos moments para calcular sesgo y la curtosis
+
+
+
 library(moments)
 
 data<-read.csv("students.csv", header=TRUE) 
 View(data)
+
+mean(data$height)
 
 #Extraemos unicamente la variable que nos interesa, en este caso las alturas
 HEIGHT<-data.frame(data$height)

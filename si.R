@@ -15,6 +15,10 @@ attach(data1)
 
 temp_suelo <-na_if(soil_temp  , -9999.0)
 conduc_soil <- na_if(conductivity_0.5.8, -9999.0)
+soil_moisture_0.12 <- (na_if(soil_moisture_0.12,  "-9999.0"))
+soil_moisture_0.20 <- na_if(soil_moisture_0.20,  -999.0)
+soil_moisture_0.3.8 <- na_if(soil_moisture_0.3.8 , -999.0)
+soil_moisture_0.5.8 <- na_if(soil_moisture_0.5.8 , -999.0)
 
 code_na <- function(vec){
   
@@ -34,7 +38,12 @@ var(temp_suelo,na.rm = T)
 summary(conduc_soil)
 var(conduc_soil,na.rm = TRUE)
 
+View(data1)
+
 #Estaditico de la humernan del suelo del suelo
+as.numeric(soil_moisture_0.12)
+print(summary(soil_moisture_0.20))
+
 
 
 # Suponiendo que ya tienes una variable llamada prueba
