@@ -23,6 +23,8 @@ var(temp_suelo,na.rm = T)
 
 #estaditico de la conductividad
 summary(conduc_soil)
+var(conduc_soil,na.rm = TRUE)
+
 # Suponiendo que ya tienes una variable llamada prueba
 # Recodificar -999.0 como NA en la variable prueba
 
