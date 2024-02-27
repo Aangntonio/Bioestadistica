@@ -16,6 +16,15 @@ attach(data1)
 temp_suelo <-na_if(soil_temp  , -9999.0)
 conduc_soil <- na_if(conductivity_0.5.8, -9999.0)
 
+code_na <- function(vec){
+  
+  p_codificado <- na_if(vec, -9999.0)
+  
+  return(p_codificado)
+}
+
+
+
 #Estaditico de la temperatura del suelo
 summary(temp_suelo)
 var(temp_suelo,na.rm = T)
@@ -24,6 +33,9 @@ var(temp_suelo,na.rm = T)
 #estaditico de la conductividad
 summary(conduc_soil)
 var(conduc_soil,na.rm = TRUE)
+
+#Estaditico de la humernan del suelo del suelo
+
 
 # Suponiendo que ya tienes una variable llamada prueba
 # Recodificar -999.0 como NA en la variable prueba
